@@ -14,5 +14,20 @@ final class OnboardingController: UIViewController {
         
         view = OnboardingView()
         model = OnboardingModel()
+        
+        onboardingView?.configurePageControl()
+        
+        configureView()
+    }
+}
+
+// MARK: - Configurations
+
+private extension OnboardingController {
+    func configureView() {
+        guard let models = model?.createModels() else { return }
+        models.forEach { [unowned self] model in
+            onboardingView?.configureView(with: model)
+        }
     }
 }
