@@ -17,6 +17,8 @@
 		6C8668282ADA8CD200559E9E /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8668272ADA8CD200559E9E /* OnboardingModel.swift */; };
 		6C86682A2ADA8CDD00559E9E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8668292ADA8CDD00559E9E /* OnboardingView.swift */; };
 		6C86682C2ADA8EE800559E9E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86682B2ADA8EE800559E9E /* Onboarding.swift */; };
+		6C8668302ADA952400559E9E /* GTWalsheimPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86682E2ADA952400559E9E /* GTWalsheimPro-Thin.ttf */; };
+		6C8668312ADA952400559E9E /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86682F2ADA952400559E9E /* GTWalsheimPro-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,9 @@
 		6C8668272ADA8CD200559E9E /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		6C8668292ADA8CDD00559E9E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		6C86682B2ADA8EE800559E9E /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		6C86682E2ADA952400559E9E /* GTWalsheimPro-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Thin.ttf"; sourceTree = "<group>"; };
+		6C86682F2ADA952400559E9E /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
+		6C8668322ADA995C00559E9E /* GTWalsheimPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +69,7 @@
 		6C8668062ADA8A3800559E9E /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
+				6C86682D2ADA952400559E9E /* Fonts */,
 				6C8668212ADA8C3100559E9E /* Sources */,
 				6C8668202ADA8C2A00559E9E /* Resources */,
 			);
@@ -133,6 +139,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		6C86682D2ADA952400559E9E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				6C86682E2ADA952400559E9E /* GTWalsheimPro-Thin.ttf */,
+				6C8668322ADA995C00559E9E /* GTWalsheimPro-Medium.ttf */,
+				6C86682F2ADA952400559E9E /* GTWalsheimPro-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +215,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C8668142ADA8A3A00559E9E /* LaunchScreen.storyboard in Resources */,
+				6C8668302ADA952400559E9E /* GTWalsheimPro-Thin.ttf in Resources */,
+				6C8668312ADA952400559E9E /* GTWalsheimPro-Bold.ttf in Resources */,
 				6C8668112ADA8A3A00559E9E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
