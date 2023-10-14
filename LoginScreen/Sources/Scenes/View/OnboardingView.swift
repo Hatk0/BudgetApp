@@ -44,4 +44,63 @@ final class OnboardingView: UIView {
         button.backgroundColor = .systemPink
         return button
     }()
+    
+    // MARK: - Initializers
+
+    init() {
+        super.init(frame: .zero)
+        setupView()
+    }
+
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        setupView()
+    }
+
+    // MARK: - Setup
+
+    private func setupView() {
+        backgroundColor = .systemBackground
+        setupHierarchy()
+        setupLayout()
+    }
+
+    private func setupHierarchy() {
+        addSubview(imageView)
+        addSubview(pageControl)
+        addSubview(titleLabel)
+        addSubview(descriptionLabel)
+        addSubview(button)
+    }
+
+    private func setupLayout() {
+        imageView.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalToSuperview().offset(100)
+            make.height.equalToSuperview().multipliedBy(0.4)
+        }
+        
+        pageControl.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(imageView.snp.bottom).offset(10)
+        }
+
+        titleLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(pageControl.snp.bottom).offset(60)
+        }
+
+        descriptionLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(titleLabel.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview().inset(20)
+        }
+
+        button.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.height.equalTo(40)
+            make.width.equalTo(250)
+            make.top.equalTo(descriptionLabel.snp.bottom).offset(70)
+        }
+    }
 }
