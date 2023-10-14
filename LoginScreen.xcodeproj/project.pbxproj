@@ -16,6 +16,7 @@
 		6C86681F2ADA8BA000559E9E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 6C86681E2ADA8BA000559E9E /* SnapKit-Dynamic */; };
 		6C8668282ADA8CD200559E9E /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8668272ADA8CD200559E9E /* OnboardingModel.swift */; };
 		6C86682A2ADA8CDD00559E9E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8668292ADA8CDD00559E9E /* OnboardingView.swift */; };
+		6C86682C2ADA8EE800559E9E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86682B2ADA8EE800559E9E /* Onboarding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6C8668152ADA8A3A00559E9E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C8668272ADA8CD200559E9E /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		6C8668292ADA8CDD00559E9E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		6C86682B2ADA8EE800559E9E /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				6C8668272ADA8CD200559E9E /* OnboardingModel.swift */,
+				6C86682B2ADA8EE800559E9E /* Onboarding.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C86682C2ADA8EE800559E9E /* Onboarding.swift in Sources */,
 				6C8668282ADA8CD200559E9E /* OnboardingModel.swift in Sources */,
 				6C86680C2ADA8A3800559E9E /* OnboardingController.swift in Sources */,
 				6C8668082ADA8A3800559E9E /* AppDelegate.swift in Sources */,
