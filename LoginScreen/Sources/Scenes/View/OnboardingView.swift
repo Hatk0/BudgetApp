@@ -2,6 +2,19 @@ import UIKit
 import SnapKit
 
 final class OnboardingView: UIView {
+    
+    // MARK: - Configuration
+    
+    func configureView(with model: Onboarding) {
+        imageView.image = UIImage(named: model.imageName)
+        titleLabel.text = model.title
+        descriptionLabel.text = model.description
+    }
+    
+    func configurePageControl() {
+        pageControl.numberOfPages = 1
+        pageControl.currentPage = 0
+    }
 
     // MARK: - UI
 
