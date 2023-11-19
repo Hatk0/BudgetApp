@@ -19,6 +19,7 @@
 		6C86682C2ADA8EE800559E9E /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C86682B2ADA8EE800559E9E /* Onboarding.swift */; };
 		6C8668302ADA952400559E9E /* GTWalsheimPro-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86682E2ADA952400559E9E /* GTWalsheimPro-Thin.ttf */; };
 		6C8668312ADA952400559E9E /* GTWalsheimPro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6C86682F2ADA952400559E9E /* GTWalsheimPro-Bold.ttf */; };
+		6CE28AC52B0A240300F0EA37 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE28AC42B0A240300F0EA37 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		6C86682E2ADA952400559E9E /* GTWalsheimPro-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Thin.ttf"; sourceTree = "<group>"; };
 		6C86682F2ADA952400559E9E /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
 		6C8668322ADA995C00559E9E /* GTWalsheimPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Medium.ttf"; sourceTree = "<group>"; };
+		6CE28AC42B0A240300F0EA37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,6 @@
 				6C8668242ADA8CA900559E9E /* Model */,
 				6C8668252ADA8CAD00559E9E /* View */,
 				6C8668262ADA8CB100559E9E /* Controller */,
-				6C86680B2ADA8A3800559E9E /* OnboardingController.swift */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -135,6 +136,8 @@
 		6C8668262ADA8CB100559E9E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6CE28AC42B0A240300F0EA37 /* SettingsViewController.swift */,
+				6C86680B2ADA8A3800559E9E /* OnboardingController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			files = (
 				6C86682C2ADA8EE800559E9E /* Onboarding.swift in Sources */,
 				6C8668282ADA8CD200559E9E /* OnboardingModel.swift in Sources */,
+				6CE28AC52B0A240300F0EA37 /* SettingsViewController.swift in Sources */,
 				6C86680C2ADA8A3800559E9E /* OnboardingController.swift in Sources */,
 				6C8668082ADA8A3800559E9E /* AppDelegate.swift in Sources */,
 				6C86682A2ADA8CDD00559E9E /* OnboardingView.swift in Sources */,
