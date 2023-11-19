@@ -37,6 +37,7 @@
 		6C86682F2ADA952400559E9E /* GTWalsheimPro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Bold.ttf"; sourceTree = "<group>"; };
 		6C8668322ADA995C00559E9E /* GTWalsheimPro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTWalsheimPro-Medium.ttf"; sourceTree = "<group>"; };
 		6CE28AC42B0A240300F0EA37 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6CE28AC62B0A245700F0EA37 /* GT-WalsheimPro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GT-WalsheimPro-Regular.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +149,7 @@
 				6C86682E2ADA952400559E9E /* GTWalsheimPro-Thin.ttf */,
 				6C8668322ADA995C00559E9E /* GTWalsheimPro-Medium.ttf */,
 				6C86682F2ADA952400559E9E /* GTWalsheimPro-Bold.ttf */,
+				6CE28AC62B0A245700F0EA37 /* GT-WalsheimPro-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
