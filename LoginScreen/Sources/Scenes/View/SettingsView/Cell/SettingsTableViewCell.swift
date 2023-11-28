@@ -11,6 +11,8 @@ class SettingsTableViewCell: UITableViewCell {
             titleLabel.text = model?.title ?? ""
             subtitleLabel.text = model?.subtitle ?? ""
             versionLabel.text = model?.version ?? ""
+            
+            updateSwitchVisibility()
         }
     }
 
@@ -123,4 +125,10 @@ class SettingsTableViewCell: UITableViewCell {
     }
     
     // MARK: - Reuse
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.accessoryType = .none
+        self.model = nil
+    }
 }
