@@ -32,6 +32,13 @@ final class BarView: UIView {
         return label
     }()
     
+    private lazy var bellImage: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(named: "bell")
+        view.contentMode = .scaleAspectFit
+        return view
+    }()
+    
     // MARK: - Initializers
     
     init() {
@@ -55,6 +62,7 @@ final class BarView: UIView {
         addSubview(pinkView)
         pinkView.addSubview(updateLabel)
         pinkView.addSubview(notificationLabel)
+        pinkView.addSubview(bellImage)
     }
     
     private func setupLayout() {
@@ -73,6 +81,12 @@ final class BarView: UIView {
         notificationLabel.snp.makeConstraints { make in
             make.top.equalTo(updateLabel.snp.bottom).offset(10)
             make.left.equalToSuperview().offset(25)
+        }
+        
+        bellImage.snp.makeConstraints { make in
+            make.centerY.equalToSuperview().offset(-25)
+            make.right.equalToSuperview().offset(-20)
+            make.width.height.equalTo(72)
         }
     }
 }
