@@ -1,29 +1,45 @@
-//
-//  SettingsViewController.swift
-//  LoginScreen
-//
-//  Created by Dmitry Yastrebov on 19.11.2023.
-//
-
 import UIKit
+import SnapKit
 
 class SettingsViewController: UIViewController {
+    
+    // MARK: - UI
+    
+    private lazy var navigationView: UIView = {
+        let navigationView = NavigationView(title: "Settings", navigationController: self.navigationController ?? UINavigationController())
+        return navigationView
+    }()
+    
+    // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        setupView()
+        setupHierarchy()
+        setupLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Setup
+    
+    private func setupView() {
+        view.backgroundColor = .systemBackground
     }
-    */
+    
+    private func setupHierarchy() {
+        view.addSubview(navigationView)
+    }
 
+    private func setupLayout() {
+        navigationView.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(20)
+        }
+    }
+    
+    // MARK: - Configuration
+    
 }
+
+// MARK: - Extension
