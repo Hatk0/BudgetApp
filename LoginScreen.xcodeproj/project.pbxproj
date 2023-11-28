@@ -59,6 +59,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C8170892B162C0100F10AA2 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				6C8668272ADA8CD200559E9E /* OnboardingModel.swift */,
+				6C86682B2ADA8EE800559E9E /* Onboarding.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		6C81708A2B162C0B00F10AA2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				6C8170832B16264900F10AA2 /* Settings.swift */,
+				6C8170852B16268300F10AA2 /* SettingsModel.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		6C81708B2B162C2A00F10AA2 /* OnboardingView */ = {
+			isa = PBXGroup;
+			children = (
+				6C8668292ADA8CDD00559E9E /* OnboardingView.swift */,
+			);
+			path = OnboardingView;
+			sourceTree = "<group>";
+		};
+		6C81708C2B162C3800F10AA2 /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				6C8170872B16276100F10AA2 /* NavigationView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
 		6C8667FB2ADA8A3800559E9E = {
 			isa = PBXGroup;
 			children = (
@@ -126,10 +160,8 @@
 		6C8668242ADA8CA900559E9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6C8668272ADA8CD200559E9E /* OnboardingModel.swift */,
-				6C86682B2ADA8EE800559E9E /* Onboarding.swift */,
-				6C8170832B16264900F10AA2 /* Settings.swift */,
-				6C8170852B16268300F10AA2 /* SettingsModel.swift */,
+				6C81708A2B162C0B00F10AA2 /* Settings */,
+				6C8170892B162C0100F10AA2 /* Onboarding */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,7 +169,8 @@
 		6C8668252ADA8CAD00559E9E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				6C8668292ADA8CDD00559E9E /* OnboardingView.swift */,
+				6C81708C2B162C3800F10AA2 /* SettingsView */,
+				6C81708B2B162C2A00F10AA2 /* OnboardingView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -147,7 +180,6 @@
 			children = (
 				6CE28AC42B0A240300F0EA37 /* SettingsViewController.swift */,
 				6C86680B2ADA8A3800559E9E /* OnboardingController.swift */,
-				6C8170872B16276100F10AA2 /* NavigationView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
