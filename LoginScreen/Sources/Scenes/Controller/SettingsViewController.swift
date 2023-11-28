@@ -66,7 +66,7 @@ class SettingsViewController: UIViewController {
     // MARK: - Configuration
     
     private func configure() {
-        settingsTableView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "identifier")
+        settingsTableView.tableView.register(SettingsTableViewCell.self, forCellReuseIdentifier: SettingsTableViewCell.identifier)
         settingsTableView.tableView.dataSource = self
         settingsTableView.tableView.delegate = self
         settingsTableView.tableView.isScrollEnabled = false
