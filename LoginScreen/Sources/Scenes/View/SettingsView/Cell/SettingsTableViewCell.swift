@@ -13,6 +13,12 @@ class SettingsTableViewCell: UITableViewCell {
         return image
     }()
     
+    private lazy var titleLabel: UILabel = {
+       let label = UILabel()
+        label.font = UIFont(name: "GTWalsheimPro-Bold", size: 18)
+        return label
+    }()
+    
     // MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -29,6 +35,7 @@ class SettingsTableViewCell: UITableViewCell {
     
     private func setupHierarchy() {
         addSubview(settingImageView)
+        addSubview(titleLabel)
     }
     
     private func setupLayout() {
@@ -37,6 +44,11 @@ class SettingsTableViewCell: UITableViewCell {
             make.centerY.equalToSuperview()
             make.width.equalTo(50)
             make.height.equalTo(50)
+        }
+        
+        titleLabel.snp.makeConstraints { make in
+            make.leading.equalTo(settingImageView.snp.trailing).offset(20)
+            make.top.equalToSuperview().offset(8)
         }
     }
     
