@@ -10,6 +10,11 @@ class SettingsViewController: UIViewController {
         return navigationView
     }()
     
+    private lazy var barView: UIView = {
+        let barView = BarView()
+        return barView
+    }()
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -28,6 +33,7 @@ class SettingsViewController: UIViewController {
     
     private func setupHierarchy() {
         view.addSubview(navigationView)
+        view.addSubview(barView)
     }
 
     private func setupLayout() {
@@ -35,6 +41,12 @@ class SettingsViewController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(20)
+        }
+        
+        barView.snp.makeConstraints { make in
+            make.top.equalTo(navigationView.snp.bottom).offset(10)
+            make.leading.trailing.equalToSuperview()
+            make.height.equalTo(50)
         }
     }
     
