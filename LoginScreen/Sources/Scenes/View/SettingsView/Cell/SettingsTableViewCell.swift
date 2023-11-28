@@ -110,5 +110,17 @@ class SettingsTableViewCell: UITableViewCell {
     
     // MARK: - Private methods
     
+    func updateSwitchVisibility() {
+        if let title = model?.title, title == "Notification" || title == "Settings title" {
+            customSwitch.isHidden = false
+            accessoryType = .none
+            selectionStyle = .none
+        } else {
+            customSwitch.isHidden = true
+            accessoryType = .none
+            selectionStyle = .default
+        }
+    }
+    
     // MARK: - Reuse
 }
