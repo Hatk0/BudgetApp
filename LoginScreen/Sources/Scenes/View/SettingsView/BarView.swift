@@ -24,6 +24,14 @@ final class BarView: UIView {
         return label
     }()
     
+    private lazy var notificationLabel: UILabel = {
+       let label = UILabel()
+        label.font = UIFont(name: "GTWalsheimPro-Bold", size: 21)
+        label.text = "Turn on notifications"
+        label.textColor = .white
+        return label
+    }()
+    
     // MARK: - Initializers
     
     init() {
@@ -46,6 +54,7 @@ final class BarView: UIView {
     private func setupHierarchy() {
         addSubview(pinkView)
         pinkView.addSubview(updateLabel)
+        pinkView.addSubview(notificationLabel)
     }
     
     private func setupLayout() {
@@ -58,6 +67,11 @@ final class BarView: UIView {
         
         updateLabel.snp.makeConstraints { make in
             make.top.equalToSuperview().offset(20)
+            make.left.equalToSuperview().offset(25)
+        }
+        
+        notificationLabel.snp.makeConstraints { make in
+            make.top.equalTo(updateLabel.snp.bottom).offset(10)
             make.left.equalToSuperview().offset(25)
         }
     }
