@@ -15,6 +15,11 @@ class SettingsViewController: UIViewController {
         return barView
     }()
     
+    private lazy var settingsTableView: SettingsTableView = {
+       let tableView = SettingsTableView()
+        return tableView
+    }()
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
@@ -23,6 +28,8 @@ class SettingsViewController: UIViewController {
         setupView()
         setupHierarchy()
         setupLayout()
+        
+        configure()
     }
     
     // MARK: - Setup
@@ -34,6 +41,7 @@ class SettingsViewController: UIViewController {
     private func setupHierarchy() {
         view.addSubview(navigationView)
         view.addSubview(barView)
+        view.addSubview(settingsTableView)
     }
 
     private func setupLayout() {
@@ -48,10 +56,33 @@ class SettingsViewController: UIViewController {
             make.leading.trailing.equalToSuperview()
             make.height.equalTo(50)
         }
+        
+        settingsTableView.snp.makeConstraints { make in
+            make.top.equalTo(barView.snp.bottom).offset(100)
+            make.leading.trailing.bottom.equalToSuperview()
+        }
     }
     
     // MARK: - Configuration
     
+    private func configure() {
+        settingsTableView.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "identifier")
+        settingsTableView.tableView.dataSource = self
+        settingsTableView.tableView.delegate = self
+        settingsTableView.tableView.isScrollEnabled = false
+        
+        settingsTableView.tableView.reloadData()
+    }
 }
 
 // MARK: - Extension
+
+extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+}
