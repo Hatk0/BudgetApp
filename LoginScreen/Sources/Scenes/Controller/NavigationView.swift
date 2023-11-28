@@ -15,6 +15,12 @@ final class NavigationView: UIView {
         return button
     }()
     
+    private lazy var settingsLabel: UILabel = {
+       let label = UILabel()
+        label.font = UIFont(name: "GTWalsheimPro-Bold", size: 24)
+        return label
+    }()
+    
     // MARK: - Initalizers
     
     override private init(frame: CGRect) {
@@ -24,6 +30,7 @@ final class NavigationView: UIView {
     
     convenience init(title: String, navigationController: UINavigationController) {
         self.init(frame: .zero)
+        settingsLabel.text = title
         self.navigationController = navigationController
         
         setupView()
@@ -43,6 +50,7 @@ final class NavigationView: UIView {
     
     private func setupHierarchy() {
         addSubview(arrowButton)
+        addSubview(settingsLabel)
     }
     
     private func setupLayout() {
@@ -51,6 +59,12 @@ final class NavigationView: UIView {
             make.left.equalToSuperview().offset(25)
             make.width.equalTo(25)
             make.height.equalTo(25)
+        }
+        
+        settingsLabel.snp.makeConstraints { make in
+            make.left.equalTo(arrowButton.snp.right).offset(18)
+            make.right.equalToSuperview().offset(-16)
+            make.centerY.equalToSuperview()
         }
     }
     
