@@ -80,11 +80,27 @@ class SettingsViewController: UIViewController {
 // MARK: - Extension
 
 extension SettingsViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return settingsModel.createModels().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell else {
+            return UITableViewCell()
+        }
+        cell.contentView.isUserInteractionEnabled = false
+        let setting = settingsModel.createModels()[indexPath.row]
+        cell.model = setting
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        _ = settingsModel.createModels()[indexPath.row]
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
