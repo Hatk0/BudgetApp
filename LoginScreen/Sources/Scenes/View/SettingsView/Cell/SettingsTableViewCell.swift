@@ -4,6 +4,15 @@ import SnapKit
 class SettingsTableViewCell: UITableViewCell {
     
     static let identifier = "SettingsTableViewCell"
+    
+    var model: Settings? {
+        didSet {
+            settingImageView.image = UIImage(systemName: model?.imageName ?? "")
+            titleLabel.text = model?.title ?? ""
+            subtitleLabel.text = model?.subtitle ?? ""
+            versionLabel.text = model?.version ?? ""
+        }
+    }
 
     // MARK: - UI
     
