@@ -3,6 +3,8 @@ import SnapKit
 
 class SettingsViewController: UIViewController {
     
+    private let settingsModel = SettingsModel()
+    
     // MARK: - UI
     
     private lazy var navigationView: UIView = {
