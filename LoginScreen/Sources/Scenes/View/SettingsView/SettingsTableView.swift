@@ -5,6 +5,12 @@ final class SettingsTableView: UIView {
     
     // MARK: - UI
     
+    lazy var tableView: UITableView = {
+        let tableView = UITableView(frame: .zero, style: .plain)
+        tableView.rowHeight = 70
+        return tableView
+    }()
+    
     // MARK: - Initalizers
     
     init() {
@@ -25,10 +31,12 @@ final class SettingsTableView: UIView {
     }
     
     private func setupHierarchy() {
-
+        addSubview(tableView)
     }
     
     private func setupLayout() {
-
+        tableView.snp.makeConstraints { make in
+            make.top.right.bottom.left.equalToSuperview()
+        }
     }
 }
