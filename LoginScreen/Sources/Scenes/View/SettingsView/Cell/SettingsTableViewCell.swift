@@ -2,6 +2,8 @@ import UIKit
 import SnapKit
 
 class SettingsTableViewCell: UITableViewCell {
+    
+    static let identifier = "SettingsTableViewCell"
 
     // MARK: - UI
     
