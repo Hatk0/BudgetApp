@@ -16,6 +16,14 @@ final class BarView: UIView {
         return view
     }()
     
+    private lazy var updateLabel: UILabel = {
+       let label = UILabel()
+        label.font = UIFont(name: "GTWalsheimPro-Thin", size: 12)
+        label.text = "Update your settings"
+        label.textColor = .white
+        return label
+    }()
+    
     // MARK: - Initializers
     
     init() {
@@ -37,6 +45,7 @@ final class BarView: UIView {
     
     private func setupHierarchy() {
         addSubview(pinkView)
+        pinkView.addSubview(updateLabel)
     }
     
     private func setupLayout() {
@@ -45,6 +54,11 @@ final class BarView: UIView {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(100)
+        }
+        
+        updateLabel.snp.makeConstraints { make in
+            make.top.equalToSuperview().offset(20)
+            make.left.equalToSuperview().offset(25)
         }
     }
 }
