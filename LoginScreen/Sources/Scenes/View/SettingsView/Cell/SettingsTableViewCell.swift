@@ -32,6 +32,19 @@ class SettingsTableViewCell: UITableViewCell {
         return label
     }()
     
+    private lazy var customSwitch: UIView = {
+        let view = CustomSwitchView(frame: .zero)
+        view.onTintColor = .systemGray4
+        view.offTintColor = .systemGray4
+        view.cornerRadius = 0.5
+        view.thumbCornerRadius = 0.5
+        view.thumbSize = .init(width: 30, height: 30)
+        view.padding = 0
+        view.thumbInPadding = 5
+        view.thumbOnTintColor = .systemPink
+        return view
+    }()
+    
     // MARK: - Initializers
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -51,6 +64,7 @@ class SettingsTableViewCell: UITableViewCell {
         addSubview(titleLabel)
         addSubview(subtitleLabel)
         addSubview(versionLabel)
+        addSubview(customSwitch)
     }
     
     private func setupLayout() {
@@ -75,6 +89,13 @@ class SettingsTableViewCell: UITableViewCell {
         versionLabel.snp.makeConstraints { make in
                 make.trailing.equalToSuperview().offset(-30)
                 make.centerY.equalToSuperview()
+        }
+        
+        customSwitch.snp.makeConstraints { make in
+            make.centerX.equalToSuperview().offset(150)
+            make.centerY.equalToSuperview()
+            make.width.equalTo(40)
+            make.height.equalTo(24)
         }
     }
     
